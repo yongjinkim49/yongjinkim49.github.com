@@ -438,8 +438,12 @@
 }
 
 .nav__list .nav__items {
-  margin: 0;
-  font-size: 1.25rem;
+  margin: 2.0rem;
+  margin-left: -1rem;
+  font-size: 0.9rem;
+  //border: 1px solid $base03;
+  //border-radius: 1px;
+  
 
   a {
     color: inherit;
@@ -481,7 +485,8 @@
 }
 
 .nav__title {
-  margin: 0;
+  display: block;
+  margin-left: -1.5rem;
   padding: 0.5rem 0.75rem;
   font-family: $sans-serif-narrow;
   font-size: $type-size-5;
@@ -568,6 +573,6 @@
   }
 
   li ul li ul li ul li ul li ul > li a {
-    padding-left: 3.25rem
+    padding-left: 3.25rem;
   }
 }

@@ -1,0 +1,20 @@
+<div class="sidebar_right sticky">
+  <div class="nav__list">
+    <ul class="nav__items">
+      {% for category in site.categories %}
+      <li>
+        <div class="nav__sub-title">
+          <div class="nav__sub-title-set">
+            <div class="nav__sub-title-name">
+              <a href="/category/{{ category | first }}" titledepth="0">
+                <span class="title_name">{{ category | first }}</span>
+                <span class="nav_sub-title-stat">({{ category | last | size }})</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

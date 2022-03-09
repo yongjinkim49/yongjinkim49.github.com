@@ -1,5 +1,6 @@
 # Welcome to Jekyll!
 
+# (arch -arch x86_64 bundle install)
 # (arch -arch x86_64 bundle exec jekyll serve) for preview on local
 #
 # This config file is meant for settings that affect your entire site, values
@@ -22,7 +23,7 @@ gdrive_url_prefix: "https://drive.google.com/uc?export=view&id="
 locale                   : "en-US"
 title                    : "Quanty Pursuits"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Study of quant finance and DeFi" # site tagline that appears below site title in masthead
 name                     : "Jin Kim"
 description              : Quant, DeFi, Crypto"
 url                      : "https://yongjinkim49.github.io"
@@ -108,29 +109,29 @@ analytics:
 # Site Author
 author:
   name             : "Jin Kim"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Quant and Crypto Enthusiast, UC Berkeley MFE"
+  avatar           : "/assets/images/git_profile.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Quant and Crypto Enthusiast"
   location         : "Berkeley, California"
   email            : 
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:yongjinkim49@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: "mailto:yongjinkim49@email.com"
+    # - label: "Website"
+      # icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/gin_kim_"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://www.facebook.com/profile.php?id=100005271635713"
+    #- label: "Facebook"
+    #  icon: "fab fa-fw fa-facebook-square"
+    #  url: "https://www.facebook.com/profile.php?id=100005271635713"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yongjinkim49"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/jin-kim-0a79bb152"
 
 # Site Footer
 footer:
@@ -144,15 +145,15 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yongjinkim49"
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+   # - label: "GitLab"
+   #   icon: "fab fa-fw fa-gitlab"
+   #   # url:
+   # - label: "Bitbucket"
+   #   icon: "fab fa-fw fa-bitbucket"
+   #   # url:
+   # - label: "Instagram"
+   #   icon: "fab fa-fw fa-instagram"
+   #   # url:
 
 
 # Reading Files
@@ -260,16 +261,16 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
@@ -286,6 +287,7 @@ defaults:
   - scope:
       path: ""
       type: posts
+      type: docs
     values:
       layout: single
       author_profile: true
@@ -293,3 +295,5 @@ defaults:
       comments: # true
       share: true
       related: true
+      sidebar:
+        nav: "docs"

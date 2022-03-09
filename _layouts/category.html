@@ -1,10 +1,40 @@
 ---
 layout: archive
+author_profile: true
 ---
 
 {{ content }}
 
+<h1 class="archive__title"> Category:   {{ page.category }}</h1>
+
+{% if paginator %}
+  {% assign posts = paginator.categories[page.category] %}
+{% else %}
+  {% assign posts = site.categories[page.category] %}
+{% endif %}
+
+
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
-  {% include posts-category.html taxonomy=page.taxonomy type=entries_layout %}
+  {% for post in posts %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
 </div>
+
+{% include paginator.html %}
+
+<!-- {{ content }} {% assign entries_layout = page.entries_layout | default: 'list'
+%}
+<div class="entries-{{ entries_layout }}">
+  {% include posts-category.html taxonomy=page.taxonomy type=entries_layout %}
+</div> -->
+
+
+
+<!-- <div class="entries-{{ entries_layout }}">
+  <ul>
+  {% for category in site.categories %}
+    <li><a href="/category/{{ category | first}}">{{ category | first }} ({{ category | last | size}})</li>
+  {% endfor %}
+  </ul>
+</div> -->
